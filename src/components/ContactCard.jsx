@@ -4,12 +4,11 @@ class ContactCard extends Component {
     
     render() { 
         return (  
-            <div className="card">
+            
+            <div className="card mb-3">
+                <div className="card-header">{this.props.Contact.Name}</div>
                 <div className="card-body">
-                    <h5 className="card-title">{this.props.Contact.Name}</h5>
-                    
-                    <div>                        
-                        <br/>
+                    <div>  
                         <span className="font-weight-bold">Name: </span>                        
                         {this.props.Contact.Name}
                         <br/>
@@ -20,13 +19,14 @@ class ContactCard extends Component {
                         {this.props.Contact.Email}
                         <br/>
                         <span className="font-weight-bold">Address: </span>
-                        {this.props.Contact.Neighborhood}                        
+                        {this.props.Contact.Neighborhood}    
+                        <p/>                        
                     </div>
-                    <a href="#" className="card-link">Edit</a> 
-                    <a href="#" className="card-link">Details</a>
+                    <a className="btn btn-primary mr-3" href="#">Edit</a>    
+                    <a className="btn btn-success" href="#">Details</a> 
                 </div>
-            </div> 
-        );
+            </div>           
+        );  
     }
 }
  
